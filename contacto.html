@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Contacto | TuCDMusica</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Inicio </a></li>
+                <li><a href="cd.html">CD</a> </li>
+                <li><a href="vinilos.html">Vinilos</a></li>
+                <li><a href="quienesomos.html"> Quienes Somos</a> </li>
+                <li><a class="activo" href="contacto.html"> Contacto </a> </li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <section class="caja color2">
+
+            <h1>Contactenos en que esta interesado</h1>
+            <div class="contenido color1">
+            <form action="">
+                <label for="nombre">Nombre: </label>
+                <input id="nombre" type="text">
+
+                <label for="apellido">Apellido:</label>
+                <input id="apellido" type="text">
+                <label for="OpcionCV">En que esta interesado</label>
+                <select name="OpcionCV" id="OpcionCV">
+                    <option value="CD">CD</option>
+                    <option value="Vinilo">Vinilo</option>
+                </select>
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" id="correo">
+                <label for="comentario">Escriba sobre cual esta interesado</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                <input type="checkbox">Esta interesado en que le enviemos mas informacion y ofertas.
+                <input type="reset"> <button type="submit">Enviar</button>
+            </form>
+        </div> 
+        </section>
+    </main>
+    <footer>
+        <p> &#169 tuscdmusica</p>
+    </footer>
+
+
+</body>
+
+</html>
