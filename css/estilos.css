@@ -85,7 +85,6 @@ p {
     color: black;
     grid-column: 1/4;
     border: 0.1px solid rgb(222, 222, 222);
-
 }
 
 .caja {
@@ -100,6 +99,10 @@ p {
     animation-name: appears;
     animation-duration: 2s;
     animation-iteration-count: 1;
+}
+
+.caja .titulo{
+    margin: 1rem;
 }
 
 .item img {
@@ -140,7 +143,10 @@ p {
    
 }
 
+.item-1 .caja{
+    background-image: linear-gradient(to right,  #F32424 ,  #764AF1);
 
+}
 
 .item-2 {
     padding: 0.5rem;
@@ -224,6 +230,15 @@ que pronto despues se cambiaria por grid*/
 .card img {
     height: 250px;
     width: 280px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    text-align: center;
+    background-image: linear-gradient(to right,  #d14c4c ,  #3f0ad1);
 }
 
 .contenido img {
