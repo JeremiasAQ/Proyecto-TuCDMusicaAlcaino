@@ -26,12 +26,6 @@ footer {
 }
 
 
-div {
-    height: 100%;
-    width: 100%;
-}
-
-
 ul {
     display: block;
 }
@@ -41,10 +35,10 @@ a {
     font-size: 18px;
     font-weight: lighter;
     color: #F2F2F2;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-p{
+p {
     margin-bottom: 0.8rem;
 }
 
@@ -52,12 +46,12 @@ p{
 
 .color1 {
     background-color: #764AF1;
-    z-index: 3;
+
 }
 
 .color2 {
     background-color: #9772FB;
-    z-index: 3;
+
 }
 
 
@@ -67,7 +61,7 @@ p{
     font-size: 30px;
 }
 
-.activo{
+.activo {
     color: #b399fb;
     font-weight: bold;
 }
@@ -95,7 +89,7 @@ p{
 }
 
 .caja {
-    height: 60%;
+    height: 100%;
     margin: 0.1rem;
     padding: 0.5rem;
     text-align: center;
@@ -103,6 +97,9 @@ p{
     border-radius: 0.5rem;
     box-shadow: 2px 2px 4px grey;
     z-index: 3;
+    animation-name: appears;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
 
 .item img {
@@ -112,7 +109,7 @@ p{
 }
 
 .imgb {
-    background-image:url("../img/Cds.jpg");
+    background-image: url("../img/Cds.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-attachment: local; */
@@ -121,7 +118,7 @@ p{
 }
 
 .imgb1 {
-    background-image:url("../img/Vinilos.jpg");
+    background-image: url("../img/Vinilos.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-attachment: fixed; */
@@ -140,7 +137,10 @@ p{
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10%;
+   
 }
+
+
 
 .item-2 {
     padding: 0.5rem;
@@ -176,18 +176,55 @@ li:hover {
 
 /* Cree esta clase para poder ordenar mejor el contenido 
 que pronto despues se cambiaria por grid*/
-.catalogo {
-    margin: 0.5rem;
-    padding: 1rem;
-    background-color: #764AF1;
-    border-radius: 5%;
 
+
+.catalogo {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #764AF1;
+    animation-name: appears;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+/* Animacion de aparicion */
+@keyframes appears {
+    0% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 100%;
+        visibility: visible;
+    }
 }
 
 .catalogo p {
     font-size: 20px;
+    font-weight: bold;
 }
 
+/* Formato para un mejor vista grafica del catalogo */
+.card {
+    width: 300px;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    animation-name: appears;
+}
+
+.card img {
+    height: 250px;
+    width: 280px;
+}
 
 .contenido img {
     width: 30%;
@@ -195,15 +232,39 @@ que pronto despues se cambiaria por grid*/
 }
 
 
+.caja a {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: #F32424;
+    border-radius: 20%;
+}
+
+.caja a:hover {
+    background-color: #d81616;
+    margin: 0.6rem;
+    padding: 0.6rem;
+}
 
 /* Media Queries */
 
 @media screen and (max-width:480px) {
 
     .container {
-        display: grid;
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: 1fr;
+    }
+
+    .container2 {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .catalogo {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+
+
     }
 
     .item {
@@ -219,23 +280,14 @@ que pronto despues se cambiaria por grid*/
 
     }
 
-    .item-2 img{
-        height:40%;
-        width:40%;
+    .item-2 img {
+        height: 40%;
+        width: 40%;
 
     }
 
-     .btn{
-        width: 1rem;
-        height: 30%;
-        font-size: 1.3rem;
-        padding: 1rem;
-    }
-    .btn a{
-        margin:0;
-        padding:0;
-    
-    }
+
+
 
 
     ul {
@@ -245,8 +297,8 @@ que pronto despues se cambiaria por grid*/
         justify-items: center;
     }
 }
+
 /* 
 @media screen and (max-width:860px) {
 
 } */
-
