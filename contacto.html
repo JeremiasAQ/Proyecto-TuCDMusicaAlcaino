@@ -9,53 +9,90 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Contacto | TuCDMusica</title>
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="cd.html">CD</a> </li>
-                <li><a href="vinilos.html">Vinilos</a></li>
-                <li><a href="quienesomos.html"> Quienes Somos</a> </li>
-                <li><a class="activo" href="contacto.html"> Contacto </a> </li>
-            </ul>
+        <!-- Se saco el boton algunas cosas del bootstrap como el search y disabled por que no los necesito en mi proyecto -->
+        <nav class="navbar navbar-expand-sm ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">TuCDMusica</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
 
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cd.html">CD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="vinilos.html">Vinilo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="quienesomos.html">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
+
     <main>
-        <div class="container2">
-            <section class="caja color2">
-
-                <h1 class="titulo">Contactenos en que esta interesado</h1>
-            <div class="contenido color1">
-                <form action="">
-                    <label for="nombre">Nombre: </label>
-                    <input id="nombre" type="text">
-
-                    <label for="apellido">Apellido:</label>
-                    <input id="apellido" type="text">
-                    <label for="OpcionCV">En que esta interesado</label>
-                    <select name="OpcionCV" id="OpcionCV">
-                        <option value="CD">CD</option>
-                        <option value="Vinilo">Vinilo</option>
-                    </select>
-                    <label for="correo">Correo</label>
-                    <input type="email" name="correo" id="correo">
-                    <label for="comentario">Escriba sobre cual esta interesado</label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
-                    <input type="checkbox">Esta interesado en que le enviemos mas informacion y ofertas.
-                    <input type="reset"> <button type="submit">Enviar</button>
-                </form>
+                    <!-- Solo escribi el color2 por que el color el que estaba no se encontraba en bootstrap -->
+        <div class="container-fluid color2 p-3 d-flex flex-column justify-content-evenly">
+            <p class="h1 text-white text-center">Contactenos en que esta interesado</p>
+            <div class="m-3">
+                <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="formGroupExampleInput"
+                    placeholder="Nombre">
             </div>
-        </section>
+            <div class="m-3">
+                <label for="formGroupExampleInput2" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2"
+                    placeholder="Apellido">
+            </div>
+            <div class="m-3">
+                <label for="formGroupExampleInput2" class="form-label">Correo</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2"
+                    placeholder="Correo">
+            </div>
+            <div class="form-floating m-3">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option value="1">CD</option>
+                    <option value="2">Vinilo</option>
+                </select>
+                <label for="floatingSelect">Seleccione tipo </label>
+            </div>
+            <div class="form-floating m-3 flex-fill">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Escriba sobre cual esta interesado</label>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary">Esta interesado en que le enviemos mas informacion
+                    y ofertas.</button>
+            </div>
+            <input class="btn btn-primary btn-sm" type="submit" value="Enviar">
         </div>
-       
-           
+
+
     </main>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <footer>
         <p> &#169 tuscdmusica</p>
     </footer>
