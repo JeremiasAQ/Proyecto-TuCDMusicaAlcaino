@@ -5,57 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+   
     <title>Quienes Somos | TuCDMusica</title>
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="cd.html">CD</a> </li>
-                <li><a href="vinilos.html">Vinilos</a></li>
-                <li><a class="activo" href="quienesomos.html"> Quienes Somos</a> </li>
-                <li><a href="contacto.html"> Contacto </a> </li>
-            </ul>
+        <!-- Se saco el boton algunas cosas del bootstrap como el search y disabled por que no los necesito en mi proyecto -->
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">TuCDMusica</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
 
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cd.html">CD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="vinilos.html">Vinilo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="quienesomos.html">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        <div class="container2">
-            <section class="caja color2">
-                <h1 class="titulo">Quienes Somos</h1>
-                <div class="contenido color1">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sint quod exercitationem ipsa
-                        tempore
-                        modi,
-                        reprehenderit autem quibusdam a magni, sapiente, unde nisi. Iure accusantium iste fugiat officia
-                        tempore
-                        cumque?
-                        Adipisci dolores itaque error! Perferendis nihil a quidem natus quo provident rem molestiae
-                        aspernatur
-                        eligendi. Voluptatum ut et dolores eaque tenetur illo quae minus voluptates commodi, facilis
-                        tempore
-                        consequuntur corrupti!
-                        Eos maiores dolore excepturi nulla possimus in itaque, molestias totam odio alias incidunt
-                        facere
-                        tempore
-                        iste similique harum laborum nemo natus sunt animi vel velit obcaecati nam. Incidunt, aliquam
-                        laborum.
-                       </p>
+        <div class="container-fluid m-0 p-0">
+            <video src="img/cd_-_54731 (Original).mp4" autoplay="true" muted="true" loop="true" ></video>
 
-                    <img src="img/cd.jpg" alt="Conjunto de cd">
-                    <img src="img/Vinilos.jpg" alt="Conjunto de Vinilo" >
+            <section class="caja">
+                <p class="h1 text-center text-white ">Quienes Somos</p>
+                <div class="rounded color1 p-4">
+                    <p class="">Somos una empresa pequeña que lleva 3 años en servicio que  se dedica a la venta de productos cd y de vinilos
+                        en el cual presentamos una gran variedad de clasicos de distinto género. 
+                       </p>
+                       <div class="ordeni">
+                        <img class="imgr m-1" src="img/cd.jpg"  alt="Conjunto de cd">
+                        <img class="imgr m-1" src="img/Vinilos.jpg"  alt="Conjunto de Vinilo" >
+                       </div>
+                   
                 </div>
             </section>
         </div>
 
     </main>
+       <!-- JavaScript Bundle with Popper -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+       crossorigin="anonymous"></script>
     <footer>
         <p> &#169 tuscdmusica</p>
     </footer>

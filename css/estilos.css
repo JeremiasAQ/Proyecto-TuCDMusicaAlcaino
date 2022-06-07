@@ -30,13 +30,6 @@ ul {
     display: block;
 }
 
-a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: lighter;
-    color: #F2F2F2;
-    cursor: pointer;
-}
 
 p {
     margin-bottom: 0.8rem;
@@ -44,22 +37,26 @@ p {
 
 /* clases */
 
+
+.acolor  {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #F2F2F2;
+    cursor: pointer;
+}
+
+
 .color1 {
-    background-color: #764AF1;
+    background-color: rgb(118, 74, 241,0.3);
 
 }
 
 .color2 {
-    background-color: #9772FB;
+    background-color: rgb(151, 114, 251,0.5);
 
 }
 
-
-.titulo {
-    text-align: center;
-    color: white;
-    font-size: 30px;
-}
 
 .activo {
     color: #b399fb;
@@ -67,33 +64,26 @@ p {
 }
 
 
-.container {
-    height: 100%;
-    display: grid;
-    grid-template-rows: 0.5fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
-
-.container section {
-    height: 100%
-}
 
 .item {
-    height: 50%;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 1rem;
     color: black;
-    grid-column: 1/4;
-    border: 0.1px solid rgb(222, 222, 222);
+    /* grid-column: 1/4; */
+    /* border: 0.1px solid rgb(222, 222, 222); */
 }
 
 .caja {
     height: 100%;
-    margin: 0.1rem;
+    /* margin: 0 auto; */
     padding: 0.5rem;
     text-align: center;
     font-size: 1.3rem;
-    border-radius: 0.5rem;
     box-shadow: 2px 2px 4px grey;
     z-index: 3;
     animation-name: appears;
@@ -101,8 +91,21 @@ p {
     animation-iteration-count: 1;
 }
 
-.caja .titulo{
-    margin: 1rem;
+
+.ordeni{
+    width: 100%;
+    display: flex;
+    flex: row;
+    align-items:center;
+    justify-content: space-between;
+
+}
+
+
+.imgr{
+    width: 50%;
+    height: 300px;
+    max-height: auto;
 }
 
 .item img {
@@ -112,6 +115,8 @@ p {
 }
 
 .imgb {
+
+    max-width: 100%;
     background-image: url("../img/Cds.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,32 +132,37 @@ p {
     /* background-attachment: fixed; */
 
 }
+.imgb2 {
+    background-image: url("../img/Vinilos2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
 
-.imgb img {
-    width: 100%;
-    height: 100%;
+}
+.imgb3 {
+    
+    background-image: url("../img/cdsb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+
 }
 
+
 .item-1 {
+    height: 80vh;
     width: 100%;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10%;
-   
 }
 
-.item-1 .caja{
-    background-image: linear-gradient(to right,  #F32424 ,  #764AF1);
-
-}
 
 .item-2 {
+    height:80vh ;
     padding: 0.5rem;
     grid-column: 1/4;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
 }
@@ -163,14 +173,34 @@ p {
     width: 10rem;
 }
 
-.btn {
+
+/* .btn {
     padding: 0.5rem;
     font-size: 2rem;
     border-radius: 10px;
     background-color: #764AF1;
     cursor: pointer;
 
-}
+} */
+
+video {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    /* animation-name: cambiob;
+    animation-duration: 9s;
+    animation-iteration-count: 2; */
+  }
+
+/* pseudoclases */
+
+input:required {
+    border: 3px dashed red;
+  }
 
 .btn:hover {
     background-color: #9e7df6;
@@ -180,22 +210,18 @@ li:hover {
     background-color: #f95555;
 }
 
-/* Cree esta clase para poder ordenar mejor el contenido 
-que pronto despues se cambiaria por grid*/
+.card a:hover{
 
-
-.catalogo {
-    height: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: #764AF1;
-    animation-name: appears;
-    animation-duration: 2s;
+    box-shadow: 5px 5px 5px grey;
+    animation-name:grown;
+    animation-duration: 0.2s;
     animation-iteration-count: 1;
-}
+    animation-fill-mode: forwards;
+   }
+
 
 /* Animacion de aparicion */
+
 @keyframes appears {
     0% {
         opacity: 0%;
@@ -208,9 +234,35 @@ que pronto despues se cambiaria por grid*/
     }
 }
 
-.catalogo p {
-    font-size: 20px;
-    font-weight: bold;
+@keyframes cambiob {
+    
+    0%{
+        opacity: 50%;
+        
+    }
+
+    50%{
+        opacity: 70%;
+    }
+
+    100%{
+        opacity: 100%;
+        background: url(../img/Record\ -\ 65390.mp4);
+        
+    }
+}
+
+@keyframes grown {
+
+    0%{
+        width: 150px;
+        height: 50px;
+    }
+    100%{
+        font-size: 1.5rem;
+        width: 225px;
+        height: 66px;
+}
 }
 
 /* Formato para un mejor vista grafica del catalogo */
@@ -227,9 +279,11 @@ que pronto despues se cambiaria por grid*/
     animation-name: appears;
 }
 
+
+
 .card img {
-    height: 250px;
-    width: 280px;
+    height: 15rem;
+    width: 15rem;
 }
 
 .contenido {
@@ -265,21 +319,15 @@ que pronto despues se cambiaria por grid*/
 
 @media screen and (max-width:480px) {
 
-    .container {
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: 1fr;
+
+    .ordeni{
+        flex-direction: column;
     }
-
-    .container2 {
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-    }
-
-    .catalogo {
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr;
-
-
+    
+    .imgr{
+        width: 50%;
+        height: auto;
+        max-height: 300px;
     }
 
     .item {
@@ -287,6 +335,7 @@ que pronto despues se cambiaria por grid*/
         flex-direction: column;
 
     }
+    
 
     .item-2 {
         display: flex;
@@ -301,10 +350,6 @@ que pronto despues se cambiaria por grid*/
 
     }
 
-
-
-
-
     ul {
         display: flex;
         flex-direction: column;
@@ -314,6 +359,6 @@ que pronto despues se cambiaria por grid*/
 }
 
 /* 
-@media screen and (max-width:860px) {
+@media screen and (max-width:755px) {
 
 } */
