@@ -1,0 +1,151 @@
+nav {
+  background-color: #F32424;
+}
+
+nav ul {
+  display: block;
+}
+
+nav nav_li {
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+}
+
+nav nav_li li:hover {
+  background-color: #f95555;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
+
+video {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 20%;
+  height: 100%;
+  z-index: -2;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.caja {
+  background-color: #9772fb80;
+  height: 100vh;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  -webkit-box-shadow: 2px 2px 4px grey;
+          box-shadow: 2px 2px 4px grey;
+  z-index: 3;
+}
+
+.caja .ordeni {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 1;
+  -webkit-animation-name: appears;
+          animation-name: appears;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.caja .imgr {
+  width: 300px;
+  height: 300px;
+  max-height: auto;
+  z-index: 1;
+}
+
+footer {
+  background-color: #F32424;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 3rem;
+  padding-left: 1rem;
+}
+
+/* Animaciones*/
+@-webkit-keyframes appears {
+  0% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes appears {
+  0% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .ordeni_imgr {
+    width: 20%;
+    height: auto;
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .caja {
+    height: 100%;
+  }
+  .ordeni {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ordeni_imgr {
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+  }
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
