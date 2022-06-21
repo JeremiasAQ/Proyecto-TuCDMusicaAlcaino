@@ -10,7 +10,7 @@ $colorPrincipal3: #9772fb80;
     font-family: sans-serif;
 }
 
-
+// Mixin 
 
 @mixin flexbox-center {
     display: flex;
@@ -21,50 +21,153 @@ $colorPrincipal3: #9772fb80;
 }
 
 
-$display:(
- $block:block,
- $inline:inline,
- $inlineB:inline-block,
- $flex:flex
-);
-   
-.colum-100{
-    display:map-get($display, flex);
-    flex-direction: row;
-    width: 100%;
+
+@mixin bimg ($background-image,$background-repeat,$background-size){
+    background-image: $background-image;   
+    background-repeat: $background-repeat;
+    background-size: $background-size;
 }
 
-.colum-50{
-    height: 50%;
+@mixin rimg {
     width: 50%;
+    height: 50%;
+}
+
+@mixin animations ($animation,$animation-duration,$animation-iteraction){
+        animation-name:$animation;
+        animation-duration:$animation-duration;
+        animation-iteration-count:$animation-iteraction;
+
+}
+
+
+// Extend
+
+.full100 {
+
+    height: 100%;
+    width: 100%; 
+
 }
 
 
 
+// Variables
 
-
+// Map
+   
+// Etiquetas HTML
 
 p {
     margin-bottom: 0.8rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
 }
 
-.caja{
-    background-color: $colorPrincipal3 ;
+
+video {
+    position: fixed;
+    left: 50%;
+    top: 50%;
     height: 100%;
     width: 100%;
-    padding: 1rem;
-    // margin: 2rem;
+    min-width: 100%;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+footer {
+    background-color: $colorPrincipal1;
+    font-size: 1.3rem;
+    font-weight: bold;
+    height: 3rem;
+    padding-left: 1rem;
+}
+
+
+
+// Clases
+
+.colum-100{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    
+}
+
+.colum-50{
+        @extend .full100;
+        @include flexbox-center();
+        padding: 10rem 1rem;
+
+        a{
+            @extend .full100;
+            font-weight: bolder;
+            font-size: 2rem;
+            opacity: 70%;
+        }
+
+        a:hover{
+
+            opacity: 100%
+            
+        
+            
+        }
+        
+}
+
+.vinilo{
+    border-radius: 100%;
+    height: 200px;
+    padding: 2.5rem;
+    background-color: rgb(48, 39, 39);
+}
+
+.titulo{
+    @include animations(appears, 0.5s, 1);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+//Fondos con imagen para los divs
+
+.imgb1{
+    @include bimg(url(../img/Vinilos3.jpg), no-repeat, cover);
+}
+
+.imgb2{
+    @include bimg(url(../img/RecordsCDs.jpg), no-repeat, cover);    
+    
+}
+
+
+
+
+.caja1{
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
     text-align: center;
     font-size: 1.3rem;
     box-shadow: 2px 2px 4px grey;
+    border-radius: 1em;
     z-index: 3;
+    opacity: 100%;
+    @include animations(appears, 2s, 1);
+    
 
-  
     .imgr {
         width: 40%;
         height: 80%;
         padding: 0.5rem;
         z-index: 1;
+    }
+   
+    p{
+        font-size: 2.5rem;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
     }
 
     .escalera {
@@ -109,32 +212,91 @@ p {
     }
 }
 
-
-
-
-video {
-    position: fixed;
-    left: 50%;
-    top: 50%;
+.caja{
+    background-color: rgb(245, 38, 38,) ;
     height: 100%;
     width: 100%;
-    min-width: 100%;
-    z-index: -1;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-
-
-
-footer {
-    background-color: $colorPrincipal1;
+    padding: 0.5rem;
+    text-align: center;
     font-size: 1.3rem;
-    font-weight: bold;
-    height: 3rem;
-    padding-left: 1rem;
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 1em;
+    z-index: 3;
+    opacity: 100%;
+    @include animations(appears, 2s, 1);
+
+    p{
+        font-size: 2.5rem
+    }
+}
+
+.imgb{
+    @extend .full100;
+    @include bimg(url(../img/Cds.jpg),no-repeat , cover);
+    height: 100vh;
+    z-index: -1;
+}
+.imgb4{
+    @extend .full100;
+    @include bimg(url(../img/cdsb.jpg),no-repeat , cover);
+    height: 100vh;
+    z-index: -1;
 }
 
 
+.imgb3{
+    // @extend .full100;
+    @include bimg(url(../img/Vinilos2.jpg),no-repeat , cover);
+   
+}
+
+
+.changev{
+    height: auto;
+    width: auto;
+}
+
+.inicio1{
+    @extend .full100;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fascinate', cursive;
+    
+}
+
+.inicio2{
+     @extend.full100;
+
+}
+
+
+.card{
+    width: 300px;
+    padding: 0.2rem;
+    margin:0.2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    animation-name: appears;
+
+    img{
+        height: 300px;
+        width: auto;
+    }
+         a:hover{
+            box-shadow: 5px 5px 5px grey;
+            animation-name:grown;
+            animation-duration: 0.2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+  
+}
 /* Animaciones*/
 
 @keyframes appears {
@@ -148,6 +310,19 @@ footer {
         visibility: visible;
     }
 }
+
+@keyframes grown {
+
+    0%{
+        width: 150px;
+        height: 50px;
+    }
+    100%{
+        font-size: 1.5rem;
+        width: 225px;
+        height: 66px;
+    }
+}  
 
 
 /* Media Queries */
@@ -163,11 +338,26 @@ footer {
         }
     }
 
-    // .ordeni_imgr {
-    //     width: 20%;
-    //     height: auto;
-    //     max-height: 300px;
-    // }
+    .colum-100{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .inicio1{
+        flex-direction: column;
+    }
+
+    .card{
+        margin: 0 auto;
+    }
+
+    .caja{
+        
+            p{
+                font-size: 1.5rem;
+            }
+       
+    }
 
 }
 
@@ -175,12 +365,16 @@ footer {
 
     .caja {
         height: 100%;
+
+        p{
+            font-size: 1rem;
+        }
     }
 
     .ordeni {
         flex-direction: column;
 
-        &_imgr {
+        &imgr {
             width: 50%;
             height: auto;
             max-height: 300px;
@@ -194,5 +388,13 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-items: center;
+    }
+
+    .card{
+        width: 250px;
+
+        img{
+            width: 100%;
+        }
     }
 }

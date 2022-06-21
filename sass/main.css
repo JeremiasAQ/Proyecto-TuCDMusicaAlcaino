@@ -24,93 +24,15 @@ nav nav_li li:hover {
   font-family: sans-serif;
 }
 
-.colum-100 {
+.full100, .colum-50, .colum-50 a, .imgb, .imgb4, .inicio1, .inicio2 {
   height: 100%;
   width: 100%;
-}
-
-.colum-50 {
-  height: 50%;
-  width: 50%;
 }
 
 p {
   margin-bottom: 0.8rem;
-}
-
-.caja {
-  background-color: #9772fb80;
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.3rem;
-  -webkit-box-shadow: 2px 2px 4px grey;
-          box-shadow: 2px 2px 4px grey;
-  z-index: 3;
-}
-
-.caja .imgr {
-  width: 40%;
-  height: 80%;
-  padding: 0.5rem;
-  z-index: 1;
-}
-
-.caja .escalera {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.caja .escalera .escalon {
-  height: 100%;
-  width: 90%;
-  margin: 1rem;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.caja .escalera .escalon p {
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
-
-.caja .escalera .escalon1 {
-  height: 100%;
-  width: 100%;
-  margin: 1rem;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  text-align: center;
-}
-
-.caja .escalera .escalon1 p {
-  margin: 0.5rem;
-  padding: 0.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
 }
 
 video {
@@ -131,6 +53,265 @@ footer {
   font-weight: bold;
   height: 3rem;
   padding-left: 1rem;
+}
+
+.colum-100 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 10%;
+}
+
+.colum-50 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10rem 1rem;
+}
+
+.colum-50 a {
+  font-weight: bolder;
+  font-size: 2rem;
+  opacity: 70%;
+}
+
+.colum-50 a:hover {
+  opacity: 100%;
+}
+
+.vinilo {
+  border-radius: 100%;
+  height: 200px;
+  padding: 2.5rem;
+  background-color: #302727;
+}
+
+.titulo {
+  -webkit-animation-name: appears;
+          animation-name: appears;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+.imgb1 {
+  background-image: url(../img/Vinilos3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imgb2 {
+  background-image: url(../img/RecordsCDs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caja1 {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  -webkit-box-shadow: 2px 2px 4px grey;
+          box-shadow: 2px 2px 4px grey;
+  border-radius: 1em;
+  z-index: 3;
+  opacity: 100%;
+  -webkit-animation-name: appears;
+          animation-name: appears;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.caja1 .imgr {
+  width: 40%;
+  height: 80%;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+.caja1 p {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.caja1 .escalera {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.caja1 .escalera .escalon {
+  height: 100%;
+  width: 90%;
+  margin: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.caja1 .escalera .escalon p {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.caja1 .escalera .escalon1 {
+  height: 100%;
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+}
+
+.caja1 .escalera .escalon1 p {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.caja {
+  background-color: #f52626;
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  -webkit-box-shadow: 2px 2px 4px grey;
+          box-shadow: 2px 2px 4px grey;
+  border-radius: 1em;
+  z-index: 3;
+  opacity: 100%;
+  -webkit-animation-name: appears;
+          animation-name: appears;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.caja p {
+  font-size: 2.5rem;
+}
+
+.imgb {
+  background-image: url(../img/Cds.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  z-index: -1;
+}
+
+.imgb4 {
+  background-image: url(../img/cdsb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  z-index: -1;
+}
+
+.imgb3 {
+  background-image: url(../img/Vinilos2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.changev {
+  height: auto;
+  width: auto;
+}
+
+.inicio1 {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Fascinate', cursive;
+}
+
+.card {
+  width: 300px;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-animation-name: appears;
+          animation-name: appears;
+}
+
+.card img {
+  height: 300px;
+  width: auto;
+}
+
+.card a:hover {
+  -webkit-box-shadow: 5px 5px 5px grey;
+          box-shadow: 5px 5px 5px grey;
+  -webkit-animation-name: grown;
+          animation-name: grown;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 /* Animaciones*/
@@ -155,6 +336,30 @@ footer {
   }
 }
 
+@-webkit-keyframes grown {
+  0% {
+    width: 150px;
+    height: 50px;
+  }
+  100% {
+    font-size: 1.5rem;
+    width: 225px;
+    height: 66px;
+  }
+}
+
+@keyframes grown {
+  0% {
+    width: 150px;
+    height: 50px;
+  }
+  100% {
+    font-size: 1.5rem;
+    width: 225px;
+    height: 66px;
+  }
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .escalera {
@@ -166,11 +371,34 @@ footer {
   .escalera p {
     font-size: 1.1rem;
   }
+  .colum-100 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .inicio1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card {
+    margin: 0 auto;
+  }
+  .caja p {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 485px) {
   .caja {
     height: 100%;
+  }
+  .caja p {
+    font-size: 1rem;
   }
   .ordeni {
     -webkit-box-orient: vertical;
@@ -178,7 +406,7 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .ordeni_imgr {
+  .ordeniimgr {
     width: 50%;
     height: auto;
     max-height: 300px;
@@ -195,6 +423,12 @@ footer {
         -ms-flex-align: center;
             align-items: center;
     justify-items: center;
+  }
+  .card {
+    width: 250px;
+  }
+  .card img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
