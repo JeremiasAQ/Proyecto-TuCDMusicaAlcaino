@@ -11,17 +11,26 @@ nav {
         display: block;
     }
 
-    & &_li {
+    & li {
         display: inline-block;
         padding: 20px;
         margin: 10px;
 
-        li:hover{
+        li:hover {
             background-color: #f95555;
         }
 
-    
+        a {
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        &:hover {
+            background: #f95555;
+        }
+
+
     }
-     
+
 
 }
